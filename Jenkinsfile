@@ -6,6 +6,7 @@ pipeline{
     environment{
         DEV = ""
         QA = "Trello.postman_environment.json"
+        COLLECTION = "Trello.postman_collection.json"
     }
     parameters{
             choice(name: 'ENV', choices: ['QA', 'DEV'])

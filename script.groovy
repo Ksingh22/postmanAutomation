@@ -1,4 +1,3 @@
-def env = "Trello.postman_collection.json"
 def checknpm(){
     echo "check npm version version"
 
@@ -19,7 +18,7 @@ def installdependencies(){
 
 def runPostmanCollection(){
     echo "running postman collection"
-    bat "newman run ${QA}\
-         -- environment ${env}"
+    bat "newman run ${COLLECTION}\
+         -- environment ${QA}"
 }
  return this
