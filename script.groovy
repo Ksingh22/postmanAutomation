@@ -1,7 +1,7 @@
 def checknpm(){
     echo "check npm version version"
-    
-        sh "npm --version"
+
+        bat "npm --version"
     
 }
  return this
