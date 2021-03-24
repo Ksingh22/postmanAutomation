@@ -43,7 +43,7 @@ pipeline{
                 }
             }
         }
-        stage("run postman collection"){
+        stage("run collection and publish reports"){
             steps{
                 script{
                     gv.runPostmanCollection()
