@@ -7,7 +7,7 @@ pipeline{
         stage("get secrets from aws"){
             steps{
                 script{
-                         apikey=  apikey = sh (script: "aws secretsmanager get-secret-value --region us-east-2 --secret-id postmankey | jq -r .SecretString | jq -r .postmankey", returnStdout: true)
+                        sh (script: "aws secretsmanager get-secret-value --region us-east-2 --secret-id postmankey")
                 echo "building on ${ENV}"
                         }
                 }
