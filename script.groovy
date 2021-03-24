@@ -18,11 +18,10 @@ def installdependencies(){
 
 def runPostmanCollection(){
     echo "running postman collection"
-    dir('newman')
     bat  "newman run ${COLLECTION}\
          -- environment ${QA}\
          --reporters cli,htmlextra \
-         --reporter-htmlextra-export "newman/report.html""
+         --reporter-htmlextra-export"
 }
 
  return this
