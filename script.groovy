@@ -18,7 +18,7 @@ def installdependencies(){
 
 def runPostmanCollection(){
     echo "running postman collection"
-    bat  "newman run ${COLLECTION}\
+    bat  "newman run ${COLLECTION}–disable-unicode\
          --environment ${QA}\
          --reporters cli,htmlextra \
          --reporter-htmlextra-export"
