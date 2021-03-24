@@ -1,7 +1,7 @@
 pipeline{
     agent any
     parameters{
-            choice(name: 'ENV', choices: ['QA, DEV'])
+            choice(name: 'ENV', choices: ['QA', 'DEV'])
     }
     stages{
         stage("get secrets from aws"){
